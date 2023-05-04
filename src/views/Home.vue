@@ -28,57 +28,91 @@ export default {
       renderer: null,
       axisHelper: null,
       sphere: null,
+      // flat:null,
       time: {
         value: 0,
       },
       dataList: [
         {
           // 场景贴图
-          image: require("@/assets/image/livingRoom.jpg"),
+          image: require("@/assets/image/ROOM1.jpg"),
           tipsList: [
-            // 标签数据
+            // 进入展厅
             {
-              position: { x: -50, y: -4, z: 150 },
+              position: { x: -200, y: 20, z: 120 },
+              id: 0,
               content: {
-                title: "信息点1",
-                text: "这是商品1",
+                title: "展厅",
+                text: "进入展厅",
+                // 路径
                 image: 1,
                 showTip: false,
                 showTitle: true,
               },
             },
             {
-              position: { x: -100, y: 0, z: -231 },
+              position: { x: -100, y: 10, z: -120 },
+              id: 0,
               content: {
-                title: "墙纸",
-                text: "墙纸",
+                title: "更衣室",
+                text: "进入更衣室",
                 image: 2,
-                showTip: true,
+                showTip: false,
+                showTitle: true,
+              },
+            },
+          ],
+        },
+        {
+          image: require("@/assets/image/ROOM2.jpg"),
+          tipsList: [
+            {
+              position: { x: -100, y: -4, z: 150 },
+              id: 0,
+              content: {
+                title: "前台",
+                text: "",
+                image: 0,
+                showTip: false,
                 showTitle: true,
               },
             },
             {
-              position: { x: 150, y: -50, z: -198 },
+              position: { x: 98, y: 20, z: -231 },
+              id: 3,
               content: {
-                title: "床",
-                text: "床",
+                title: "女装",
+                text: "白色上衣",
                 image: 3,
                 showTip: true,
                 showTitle: true,
               },
             },
             {
-              position: { x: 210, y: 11, z: -140 },
+              position: { x: 140, y: 0, z: -150 },
+              id: 3,
               content: {
-                title: "小熊",
-                text: "小熊",
+                title: "女装",
+                text: "毛衣",
+                image: 5,
+                showTip: true,
+                showTitle: true,
+              },
+            },
+            {
+              position: { x: 200, y: 30, z: 130 },
+              id: 3,
+              content: {
+                title: "女装",
+                text: "连衣裙",
                 image: 4,
                 showTip: true,
                 showTitle: true,
               },
             },
             {
-              position: { x: 208, y: -12, z: 140 },
+              position: { x: 100, y: -12, z: 140 },
+              id: 3,
               content: {
                 title: "衣柜",
                 text: "衣柜",
@@ -89,6 +123,7 @@ export default {
             },
             {
               position: { x: 86, y: -9, z: 236 },
+              id: 3,
               content: {
                 title: "信息点5",
                 text: "口红",
@@ -100,12 +135,12 @@ export default {
           ],
         },
         {
-          image: require("@/assets/image/kitchen.jpg"),
+          image: require("@/assets/image/ROOM3.jpg"),
           tipsList: [
             {
               position: { x: -100, y: -4, z: 150 },
               content: {
-                title: "进入卧室",
+                title: "前台",
                 text: "",
                 image: 0,
                 showTip: false,
@@ -115,44 +150,15 @@ export default {
           ],
         },
         {
-          image: require("@/assets/image/wall.jpg"),
+          image: require("@/assets/image/trousers.jpg"),
           tipsList: [
             {
-              position: { x: -90, y: 50 },
+              position: { x: 40, y: 40, z: 10 },
+              id: 0,
               content: {
                 title: "返回",
                 text: "",
-                image: 0,
-                showTip: true,
-                showTitle: true,
-              },
-            },
-          ],
-        },
-        {
-          image: require("@/assets/image/bed.jpg"),
-          tipsList: [
-            {
-              position: { x: 150, y: -50, z: -198 },
-              content: {
-                title: "返回",
-                text: "",
-                image: 0,
-                showTip: true,
-                showTitle: true,
-              },
-            },
-          ],
-        },
-        {
-          image: require("@/assets/image/bear.jpg"),
-          tipsList: [
-            {
-              position: { x: 210, y: 11, z: -140 },
-              content: {
-                title: "返回",
-                text: "",
-                image: 0,
+                image: 1,
                 showTip: false,
                 showTitle: true,
               },
@@ -160,14 +166,47 @@ export default {
           ],
         },
         {
-          image: require("@/assets/image/wardrobe.jpg"),
+          image: require("@/assets/image/skirt.jpg"),
           tipsList: [
             {
-              position: { x: 208, y: -12, z: 140 },
+              position: { x: 50, y: 50, z: 10 },
+              id: 0,
               content: {
                 title: "返回",
                 text: "",
-                image: 0,
+                image: 1,
+                showTip: false,
+                showTitle: true,
+              },
+            },
+          ],
+        },
+        {
+          image: require("@/assets/image/sweater.jpg"),
+          tipsList: [
+            {
+              position: { x: 40, y: 40, z: 10 },
+              id: 0,
+              content: {
+                title: "返回",
+                text: "",
+                image: 1,
+                showTip: false,
+                showTitle: true,
+              },
+            },
+          ],
+        },
+        {
+          image: require("@/assets/image/trousers.jpg"),
+          tipsList: [
+            {
+              position: { x: 50, y: 50, z: 20 },
+              id: 0,
+              content: {
+                title: "返回",
+                text: "",
+                image: 1,
                 showTip: false,
                 showTitle: true,
               },
@@ -178,11 +217,12 @@ export default {
           image: require("@/assets/image/liptips.jpg"),
           tipsList: [
             {
-              position: { x: 86, y: -9, z: 236 },
+              position: { x: 50, y: 50, z: 10 },
+              id: 0,
               content: {
                 title: "返回",
                 text: "",
-                image: 0,
+                image: 1,
                 showTip: false,
                 showTitle: true,
               },
@@ -271,20 +311,47 @@ export default {
       });
     },
 
+    // changeContentAndtips(index) {
+    //   this.scene.children = this.scene.children.filter(
+    //     (item) => String(item.type) !== "Sprite"
+    //   );
+    //   this.tipsSpriteList = [];
+    //   let texture = new THREE.TextureLoader().load(this.dataList[index].image);
+    //   let sphereMaterial = new THREE.MeshBasicMaterial({
+    //     map: texture,
+    //     transparent: true,
+    //     opacity: 0,
+    //   });
+    //   this.sphere.material = sphereMaterial;
+    //   gsap.to(sphereMaterial, { transparent: true, opacity: 1, duration: 2 });
+    //   this.camera.updateProjectionMatrix();
+    //   this.addTipsSprite(index);
+    // },
+    // 切换场景和切换到详情展示都是此段逻辑
     changeContentAndtips(index) {
       this.scene.children = this.scene.children.filter(
         (item) => String(item.type) !== "Sprite"
       );
       this.tipsSpriteList = [];
       let texture = new THREE.TextureLoader().load(this.dataList[index].image);
-      let sphereMaterial = new THREE.MeshBasicMaterial({
-        map: texture,
-        transparent: true,
-        opacity: 0,
-      });
-      this.sphere.material = sphereMaterial;
-      gsap.to(sphereMaterial, { transparent: true, opacity: 1, duration: 2 });
-      this.camera.updateProjectionMatrix();
+      if (index > 2) {
+        const mat = new THREE.SpriteMaterial({ map: texture });
+        const obj = new THREE.Sprite(mat);
+        obj.scale.set(50, 50, 1); //只需要设置x、y两个分量就可以
+        this.scene.add(obj);
+      } else {
+        let material = new THREE.MeshBasicMaterial({
+          map: texture,
+          transparent: true,
+          opacity: 0,
+        });
+        this.sphere.material = material;
+        gsap.to(material, { transparent: true, opacity: 1, duration: 2 });
+        this.camera.updateProjectionMatrix();
+      }
+
+      // gsap.to(material, { transparent: true, opacity: 1, duration: 2 });
+      // this.camera.updateProjectionMatrix();
       this.addTipsSprite(index);
     },
 
@@ -383,6 +450,26 @@ export default {
       };
       this.tooltopContent = {};
     },
+    initPlayAudio() {
+      // 创建一个 AudioListener 并将其添加到 camera 中
+      const listener = new THREE.AudioListener();
+      this.camera.add(listener);
+
+      // 创建一个全局 audio 源
+      const sound = new THREE.Audio(listener);
+
+      // 加载一个 sound 并将其设置为 Audio 对象的缓冲区
+      const audioLoader = new THREE.AudioLoader();
+      audioLoader.load(require("@/assets/music/music1.ogg"), function (buffer) {
+        sound.setBuffer(buffer);
+        sound.setLoop(true);
+        sound.setVolume(0.5);
+        // sound.context('@/assets/music/music1.ogg')
+        sound.hasPlaybackControl(true);
+        sound.autoplay(true);
+        sound.play();
+      });
+    },
   },
   // itemClick(){
   //       // this.$router.push(item)
@@ -393,6 +480,7 @@ export default {
   //         // }
   //       })
   // },
+
   mounted() {
     let element = this.$refs.threeDBox;
     this.initScene();
@@ -400,6 +488,7 @@ export default {
     this.initControls(element);
     this.initContent();
     this.initRenderer(element);
+    this.initPlayAudio();
     this.render();
     window.addEventListener("resize", this.onResize, false);
     window.addEventListener("click", this.onMouseClick, false);

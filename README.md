@@ -1,9 +1,4 @@
-# 360-house-viewing
-
-## 项目预览地址
-```
-https://ljnmeow.github.io/360-house-viewing/dist/
-```
+# 360-mall-viewing
 
 ## Project setup
 ```
