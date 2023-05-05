@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import SkyBox from "../views/SkyBox.vue";
+import Home from "../pages/home.vue";
+import Index from "../pages/index.vue";
+// import SkyBox from "../views/SkyBox.vue";
 
 Vue.use(VueRouter);
 
@@ -10,17 +11,12 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-  //   children:[{
-  //     path:'/Item',
-  //     name:'Item',
-  //     // component:LittleBear,
-  // },
-  // ]
+    children:[{
+      path:'/index',
+      name:'index',
+      component:Index,
   },
-  {
-    path: "/skyBox",
-    name: "SkyBox",
-    component: SkyBox,
+  ]
   },
 ];
 

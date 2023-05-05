@@ -2384,9 +2384,9 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001286":
-  "integrity" "sha512-roMV5V0HNGgJ88s42eE70sstqGW/gwFndosYrikHthw98N5tLnOTxFqMLQjZVRxTWFlJ4rn+MsgXrR7MDPY4jA=="
-  "resolved" "https://registry.npmmirror.com/caniuse-lite/download/caniuse-lite-1.0.30001291.tgz"
-  "version" "1.0.30001291"
+  "integrity" "sha512-F1ZInsg53cegyjroxLNW9DmrEQ1SuGRTO1QlpA0o2/6OpQ0gFeDRoq1yFmnr8Sakn9qwwt9DmbxHB6w167OSuQ=="
+  "resolved" "https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001482.tgz"
+  "version" "1.0.30001482"
 
 "case-sensitive-paths-webpack-plugin@^2.3.0":
   "integrity" "sha1-22QGbGQi7tLgjMFLmGykN5bbxtQ="
@@ -3406,6 +3406,13 @@
   dependencies:
     "domelementtype" "^2.0.1"
     "entities" "^2.0.0"
+
+"dom7@^2.1.3":
+  "integrity" "sha512-xnhwVgyOh3eD++/XGtH+5qBwYTgCm0aW91GFgPJ3XG+jlsRLyJivnbP0QmUBFhI+Oaz9FV0s7cxgXHezwOEBYA=="
+  "resolved" "https://registry.npmmirror.com/dom7/-/dom7-2.1.5.tgz"
+  "version" "2.1.5"
+  dependencies:
+    "ssr-window" "^2.0.0"
 
 "domain-browser@^1.1.1":
   "integrity" "sha1-PTH1AZGmdJ3RN1p/Ui6CPULlTto="
@@ -8068,6 +8075,16 @@
     "safer-buffer" "^2.0.2"
     "tweetnacl" "~0.14.0"
 
+"ssr-window@^1.0.1":
+  "integrity" "sha512-dgFqB+f00LJTEgb6UXhx0h+SrG50LJvti2yMKMqAgzfUmUXZrLSv2fjULF7AWGwK25EXu8+smLR3jYsJQChPsg=="
+  "resolved" "https://registry.npmmirror.com/ssr-window/-/ssr-window-1.0.1.tgz"
+  "version" "1.0.1"
+
+"ssr-window@^2.0.0":
+  "integrity" "sha512-NXzN+/HPObKAx191H3zKlYomE5WrVIkoCB5IaSdvKokxTpjBdWfr0RaP+1Z5KOfDT0ZVz+2tdtiBkhsEQ9p+0A=="
+  "resolved" "https://registry.npmmirror.com/ssr-window/-/ssr-window-2.0.0.tgz"
+  "version" "2.0.0"
+
 "ssri@^6.0.1":
   "integrity" "sha1-FXk5E08gRk5zAd26PpD/qPdyisU="
   "resolved" "https://registry.nlark.com/ssri/download/ssri-6.0.2.tgz?cache=0&sync_timestamp=1621364626710&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssri%2Fdownload%2Fssri-6.0.2.tgz"
@@ -8341,6 +8358,19 @@
     "stable" "^0.1.8"
     "unquote" "~1.1.1"
     "util.promisify" "~1.0.0"
+
+"swiper@^3.4.2":
+  "integrity" "sha512-bXolyzBIawQRluQwFbN8DYpe6Q02bKJ2/h4JV+6dzN/WX8a8ZFPa+F0o8z7hEHSyh2NzKkTWaogaTZYVfgmKTw=="
+  "resolved" "https://registry.npmmirror.com/swiper/-/swiper-3.4.2.tgz"
+  "version" "3.4.2"
+
+"swiper@^4.0.7":
+  "integrity" "sha512-se6I7PWWu950NAMXXT+ENtF/6SVb8mPyO+bTfNxbQBILSeLqsYp3Ndap+YOA0EczOIUlea274PKejT6gKZDseA=="
+  "resolved" "https://registry.npmmirror.com/swiper/-/swiper-4.5.1.tgz"
+  "version" "4.5.1"
+  dependencies:
+    "dom7" "^2.1.3"
+    "ssr-window" "^1.0.1"
 
 "symbol-observable@^1.1.0":
   "integrity" "sha1-wiaIrtTqs83C3+rLtWFmBWCgCAQ="
@@ -8816,6 +8846,14 @@
   "integrity" "sha1-eGQcSIuObKkadfUR56OzKobl3aA="
   "resolved" "https://registry.nlark.com/vm-browserify/download/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
+
+"vue-awesome-swiper@^3.1.3":
+  "integrity" "sha512-E7suzkyApO8vNZbgdEnjSmnpsmQZyRvSVXJ7sey3XYwKPOkLhH3+GnHroBw+5PZIQXvWBwdCeQsPG1xQ1r1Rhg=="
+  "resolved" "https://registry.npmmirror.com/vue-awesome-swiper/-/vue-awesome-swiper-3.1.3.tgz"
+  "version" "3.1.3"
+  dependencies:
+    "object-assign" "^4.1.1"
+    "swiper" "^4.0.7"
 
 "vue-eslint-parser@^7.0.0":
   "integrity" "sha1-IUtd6pYQB/z/su5luJEjB2KNDa8="

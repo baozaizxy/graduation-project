@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="queen">
     <div class="view-container" ref="threeDBox"></div>
     <div class="tooltip-box" :style="tooltipPosition" ref="tooltipBox">
       <div class="container">
@@ -19,7 +19,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import gsap from "gsap";
 export default {
-  name: "Home",
+  name: "Queen",
   data() {
     return {
       scene: null,
@@ -293,7 +293,7 @@ export default {
 
     addTipsSprite(index = 0) {
       let tipTexture = new THREE.TextureLoader().load(
-        require("@/assets/image/tip.png")
+        require("@/assets/image/icon-arrow.png")
       );
       // 根据需要选择Sprite或矩形Mesh标注场景
       // 如果希望矩形始终平行于canvas画布，就选择Sprite，如果希望矩形标注姿态角度能跟着场景旋转，就使用矩形Mesh标注场景
@@ -461,11 +461,12 @@ export default {
       // 加载一个 sound 并将其设置为 Audio 对象的缓冲区
       const audioLoader = new THREE.AudioLoader();
       audioLoader.load(require("@/assets/music/music1.ogg"), function (buffer) {
+        navigator.mediaDevices.getUserMedia({ audio: true });
         sound.setBuffer(buffer);
         sound.setLoop(true);
         sound.setVolume(0.5);
         // sound.context('@/assets/music/music1.ogg')
-        sound.hasPlaybackControl(true);
+        // sound.hasPlaybackControl(true);
         sound.autoplay(true);
         sound.play();
       });
@@ -511,7 +512,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
+.queen {
   position: relative;
   width: 100%;
   height: 100%;
