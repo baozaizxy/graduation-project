@@ -16,12 +16,12 @@
             <a href="/#/index"></a>
           </div>
           <div class="header-menu">
-            <div class="item-menu">
+            <!-- <div class="item-menu">
               <span>女装区</span>
               <div class="children">
                 <ul>
                 <li class="product" v-for="(item,index) in phoneList" :key="index">
-                  <a v-bind:href="'/#/product/'+item.id" target="_blank">
+                  <a v-bind:href="'/#/Queen/'+item.id" target="_blank">
                     <div class="pro-img">
                       <img v-bind:src="item.mainImage" :alt="item.subtitle">
                     </div>
@@ -31,11 +31,11 @@
                 </li>
               </ul>
               </div>
-            </div>
+            </div> -->
             <div class="item-menu">
               <span>男装区</span>
             </div>
-            <div class="item-menu">
+            <!-- <div class="item-menu">
               <span>童装区</span>
               <div class="children">
                  <ul>
@@ -95,7 +95,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="header-search">
             <div class="wrapper">
@@ -118,22 +118,22 @@
     computed:{
     },
     mounted(){
-    this.getProductList();
+    // this.getProductList();
     },
-    methods:{
-       getProductList(){
-        this.axios.get('/products',{
-          params:{
-            categoryId:'100012',
-            pageSize:6
-          }
-        }).then((res)=>{
-          if(res.list.length>=6){
-          this.phoneList = res.list;
-          }
-        })
-      },
-    }
+    // methods:{
+    //    getProductList(){
+    //     this.axios.get('/products',{
+    //       params:{
+    //         categoryId:'100012',
+    //         pageSize:6
+    //       }
+    //     }).then((res)=>{
+    //       if(res.list.length>=6){
+    //       this.phoneList = res.list;
+    //       }
+    //     })
+    //   },
+    // }
   }
 
 </script>
@@ -176,12 +176,12 @@
               height:55px;
               &:before{
                 content:' ';
-                @include bgImg(55px,55px,'@/assets/image/mi-logo.png',55px);
+                @include bgImg(55px,55px,'./../assets/image/mi-logo.png',55px);
                 transition:margin .2s;
               }
               &:after{
                 content:' ';
-                @include bgImg(55px,55px,'@/assets/image/mi-home.png',55px);
+                @include bgImg(55px,55px,'./../assets/image/mi-home.png',55px);
               }
               &:hover:before{
                 margin-left:-55px;
@@ -223,47 +223,47 @@
           z-index: 10;
           transition: all .5s;
           background-color: #ffffff;
-          .product{
-            position:relative;
-            float:left;
-            width:16.6%;
-            height:220px;
-            font-size:12px;
-            line-height:12px;
-            text-align: center;
-            a{
-              display:inline-block;
-            }
-            img{
-              width:auto;
-              height:111px;
-              margin-top:26px;
-            }
-            .pro-img{
-              height:137px;
-            }
-            .pro-name{
-              font-weight: bold;
-              margin-top: 19px;
-              margin-bottom: 8px;
-              color: $colorB;
-            }
-            .pro-price{
-              color: $colorA;
-            }
-            &:before{
-            content:' ';
-            position:absolute;
-            top:28px;
-            right:0;
-            border-left:1px solid $colorF;
-            height:100px;
-            width:1px;
-          }
-          &:last-child:before{
-            display:none;
-          }
-          }
+          // .product{
+          //   position:relative;
+          //   float:left;
+          //   width:16.6%;
+          //   height:220px;
+          //   font-size:12px;
+          //   line-height:12px;
+          //   text-align: center;
+          //   a{
+          //     display:inline-block;
+          //   }
+          //   img{
+          //     width:auto;
+          //     height:111px;
+          //     margin-top:26px;
+          //   }
+          //   .pro-img{
+          //     height:137px;
+          //   }
+          //   .pro-name{
+          //     font-weight: bold;
+          //     margin-top: 19px;
+          //     margin-bottom: 8px;
+          //     color: $colorB;
+          //   }
+          //   .pro-price{
+          //     color: $colorA;
+          //   }
+          //   &:before{
+          //   content:' ';
+          //   position:absolute;
+          //   top:28px;
+          //   right:0;
+          //   border-left:1px solid $colorF;
+          //   height:100px;
+          //   width:1px;
+          // }
+          // &:last-child:before{
+          //   display:none;
+          // }
+          // }
         }
       }
         }
@@ -283,7 +283,7 @@
               box-sizing: border-box;
             }
             a{
-              @include bgImg(18px,18px,'@/assets/image/icon-search.png',contain);
+              @include bgImg(18px,18px,'./../assets/image/icon-search.png',contain);
               margin-left:17px;
             }
           }

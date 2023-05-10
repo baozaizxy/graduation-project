@@ -2,7 +2,7 @@
     <div class="service">
      <div class="container">
       <ul>
-        <li><span class="icon-setting"></span>预约维修服务</li>
+        <li><span class="icon-setting"></span>预约维护服务</li>
         <li><span class="icon-7day"></span>7天无理由退货</li>
         <li><span class="icon-15day"></span>15天免费换货</li>
         <li><span class="icon-post"></span>满150元包邮</li>
@@ -35,16 +35,16 @@
         margin-right:8px;
       }
       .icon-setting{
-        @include bgImg(20px,20px,'@/assets/image/icon-setting.png');
+        @include bgImg(20px,20px,'./../assets/image/icon-setting.png');
       }
       .icon-7day{
-        @include bgImg(20px,20px,'@/assets/image/icon-7day.png');
+        @include bgImg(20px,20px,'./../assets/image/icon-7day.png');
       }
       .icon-15day{
-        @include bgImg(20px,20px,'@/assets/image/icon-15day.png');
+        @include bgImg(20px,20px,'./../assets/image/icon-15day.png');
       }
       .icon-post{
-        @include bgImg(20px,20px,'@/assets/image/icon-post.png');
+        @include bgImg(20px,20px,'./../assets/image/icon-post.png');
       }
     }
 

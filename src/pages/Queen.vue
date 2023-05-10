@@ -242,7 +242,7 @@ export default {
       tooltopContent: {},
     };
   },
-  methods: {
+  methods:{
     initScene() {
       this.scene = new THREE.Scene();
       this.scene.background = new THREE.Color(0x101010);
