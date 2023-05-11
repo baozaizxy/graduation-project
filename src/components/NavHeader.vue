@@ -33,7 +33,13 @@
               </div>
             </div> -->
             <div class="item-menu">
+              <span>女装区</span>
+            </div>
+            <div class="item-menu">
               <span>男装区</span>
+            </div>
+            <div class="item-menu">
+              <span>童装区</span>
             </div>
             <!-- <div class="item-menu">
               <span>童装区</span>

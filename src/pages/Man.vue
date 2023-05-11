@@ -35,7 +35,7 @@
         dataList: [
           {
             // 场景贴图
-            image: require("@/assets/image/ROOM1.jpg"),
+            image: require("@/assets/image/MAN-ROOM1.jpg"),
             tipsList: [
               // 进入展厅
               {
@@ -63,79 +63,79 @@
               },
             ],
           },
+          // {
+          //   image: require("@/assets/image/MAN-ROOM2.jpg"),
+          //   tipsList: [
+          //     {
+          //       position: { x: -100, y: -4, z: 150 },
+          //       id: 0,
+          //       content: {
+          //         title: "前台",
+          //         text: "",
+          //         image: 0,
+          //         showTip: false,
+          //         showTitle: true,
+          //       },
+          //     },
+          //     {
+          //       position: { x: 98, y: 20, z: -231 },
+          //       id: 3,
+          //       content: {
+          //         title: "女装",
+          //         text: "白色上衣",
+          //         image: 3,
+          //         showTip: true,
+          //         showTitle: true,
+          //       },
+          //     },
+          //     {
+          //       position: { x: 140, y: 0, z: -150 },
+          //       id: 3,
+          //       content: {
+          //         title: "女装",
+          //         text: "毛衣",
+          //         image: 5,
+          //         showTip: true,
+          //         showTitle: true,
+          //       },
+          //     },
+          //     {
+          //       position: { x: 200, y: 30, z: 130 },
+          //       id: 3,
+          //       content: {
+          //         title: "女装",
+          //         text: "连衣裙",
+          //         image: 4,
+          //         showTip: true,
+          //         showTitle: true,
+          //       },
+          //     },
+          //     {
+          //       position: { x: 100, y: -12, z: 140 },
+          //       id: 3,
+          //       content: {
+          //         title: "衣柜",
+          //         text: "衣柜",
+          //         image: 5,
+          //         showTip: true,
+          //         showTitle: true,
+          //       },
+          //     },
+          //     {
+          //       position: { x: 86, y: -9, z: 236 },
+          //       id: 3,
+          //       content: {
+          //         title: "信息点5",
+          //         text: "口红",
+          //         image: 6,
+          //         showTip: true,
+          //         showTitle: true,
+          //       },
+          //     },
+          //   ],
+          // },
           {
-            image: require("@/assets/image/ROOM2.jpg"),
-            tipsList: [
-              {
-                position: { x: -100, y: -4, z: 150 },
-                id: 0,
-                content: {
-                  title: "前台",
-                  text: "",
-                  image: 0,
-                  showTip: false,
-                  showTitle: true,
-                },
-              },
-              {
-                position: { x: 98, y: 20, z: -231 },
-                id: 3,
-                content: {
-                  title: "女装",
-                  text: "白色上衣",
-                  image: 3,
-                  showTip: true,
-                  showTitle: true,
-                },
-              },
-              {
-                position: { x: 140, y: 0, z: -150 },
-                id: 3,
-                content: {
-                  title: "女装",
-                  text: "毛衣",
-                  image: 5,
-                  showTip: true,
-                  showTitle: true,
-                },
-              },
-              {
-                position: { x: 200, y: 30, z: 130 },
-                id: 3,
-                content: {
-                  title: "女装",
-                  text: "连衣裙",
-                  image: 4,
-                  showTip: true,
-                  showTitle: true,
-                },
-              },
-              {
-                position: { x: 100, y: -12, z: 140 },
-                id: 3,
-                content: {
-                  title: "衣柜",
-                  text: "衣柜",
-                  image: 5,
-                  showTip: true,
-                  showTitle: true,
-                },
-              },
-              {
-                position: { x: 86, y: -9, z: 236 },
-                id: 3,
-                content: {
-                  title: "信息点5",
-                  text: "口红",
-                  image: 6,
-                  showTip: true,
-                  showTitle: true,
-                },
-              },
-            ],
-          },
-          {
-            image: require("@/assets/image/ROOM3.jpg"),
+            image: require("@/assets/image/MAN-ROOM2.jpg"),
             tipsList: [
               {
                 position: { x: -100, y: -4, z: 150 },

@@ -1,6 +1,6 @@
 <template>
   <div class="queen">
-    <div class="view-container" ref="threeDBox"></div>
+    <div class="view-container" ref="threeDBox" style="height: 100vh"></div>
     <div class="tooltip-box" :style="tooltipPosition" ref="tooltipBox">
       <div class="container">
         <div class="title">标题：{{ tooltopContent.title }}</div>
@@ -242,7 +242,7 @@ export default {
       tooltopContent: {},
     };
   },
-  methods:{
+  methods: {
     initScene() {
       this.scene = new THREE.Scene();
       this.scene.background = new THREE.Color(0x101010);
@@ -257,8 +257,8 @@ export default {
       );
       // 拿着相机站在房间里面，看到的是房间内部，站在房子外面看到的是房子外面效果
       // x减小视角向右  y增加视角向下 z增加视角向左
-      // this.camera.position.set(50, 0, 40);
-      this.camera.position.set(-70, 20, 40);
+      this.camera.position.set(50, 0, 40);
+      // this.camera.position.set(-70, 20, 40);
     },
 
     initControls(element) {
@@ -272,6 +272,7 @@ export default {
       this.renderer = new THREE.WebGLRenderer();
       //页面上呈现大小，没事别改
       this.renderer.setSize(element.offsetWidth, element.offsetHeight);
+      console.log("initRenderer", element, element.offsetHeight);
       element.appendChild(this.renderer.domElement);
     },
 
@@ -327,6 +328,7 @@ export default {
     //   this.camera.updateProjectionMatrix();
     //   this.addTipsSprite(index);
     // },
+
     // 切换场景和切换到详情展示都是此段逻辑
     changeContentAndtips(index) {
       this.scene.children = this.scene.children.filter(
@@ -438,6 +440,29 @@ export default {
       }
     },
 
+    screenToWorld(x, y) {
+      // 将屏幕坐标归一化为[-1, 1]的范围
+      const mouseX = (x / window.innerWidth) * 2 - 1;
+      const mouseY = -(y / window.innerHeight) * 2 + 1;
+
+      // 创建一个新的三维向量，并使用unproject方法将屏幕坐标转换为三维坐标
+      const vector = new THREE.Vector3(mouseX, mouseY, 0.5);
+      vector.unproject(this.camera);
+
+      // 创建一条从相机位置到转换后的三维坐标的射线
+      const raycaster = new THREE.Raycaster();
+      raycaster.setFromCamera({ x: mouseX, y: mouseY }, this.camera);
+
+      // 获取射线与场景中的所有物体的交点，并返回距离最近的交点的坐标
+      const intersects = raycaster.intersectObjects(this.scene.children);
+      if (intersects.length > 0) {
+        return intersects[0].point;
+      }
+
+      // 如果没有交点，则返回相机的位置
+      return this.camera.position;
+    },
+
     handleTooltipHide(e) {
       e.preventDefault();
       this.tooltipPosition = {
@@ -450,27 +475,28 @@ export default {
       };
       this.tooltopContent = {};
     },
-    initPlayAudio() {
-      // 创建一个 AudioListener 并将其添加到 camera 中
-      const listener = new THREE.AudioListener();
-      this.camera.add(listener);
 
-      // 创建一个全局 audio 源
-      const sound = new THREE.Audio(listener);
+    // initPlayAudio() {
+    //   // 创建一个 AudioListener 并将其添加到 camera 中
+    //   const listener = new THREE.AudioListener();
+    //   this.camera.add(listener);
 
-      // 加载一个 sound 并将其设置为 Audio 对象的缓冲区
-      const audioLoader = new THREE.AudioLoader();
-      audioLoader.load(require("@/assets/music/music1.ogg"), function (buffer) {
-        navigator.mediaDevices.getUserMedia({ audio: true });
-        sound.setBuffer(buffer);
-        sound.setLoop(true);
-        sound.setVolume(0.5);
-        // sound.context('@/assets/music/music1.ogg')
-        // sound.hasPlaybackControl(true);
-        sound.autoplay(true);
-        sound.play();
-      });
-    },
+    //   // 创建一个全局 audio 源
+    //   const sound = new THREE.Audio(listener);
+
+    //   // 加载一个 sound 并将其设置为 Audio 对象的缓冲区
+    //   const audioLoader = new THREE.AudioLoader();
+    //   audioLoader.load(require("@/assets/music/music1.ogg"), function (buffer) {
+    //     navigator.mediaDevices.getUserMedia({ audio: true });
+    //     sound.setBuffer(buffer);
+    //     sound.setLoop(true);
+    //     sound.setVolume(0.5);
+    //     // sound.context('@/assets/music/music1.ogg')
+    //     // sound.hasPlaybackControl(true);
+    //     sound.autoplay(true);
+    //     sound.play();
+    //   });
+    // },
   },
   // itemClick(){
   //       // this.$router.push(item)
@@ -489,11 +515,11 @@ export default {
     this.initControls(element);
     this.initContent();
     this.initRenderer(element);
-    this.initPlayAudio();
+    // this.initPlayAudio();
     this.render();
     window.addEventListener("resize", this.onResize, false);
     window.addEventListener("click", this.onMouseClick, false);
-    // window.addEventListener("itemClick", this.itemClick, false);
+    window.addEventListener("itemClick", this.itemClick, false);
     this.renderer.domElement.addEventListener(
       "mousemove",
       this.onMousemove,
@@ -541,15 +567,6 @@ export default {
       max-height: 200px;
       padding: 10px;
       background-color: rgba(0, 0, 0, 0.6);
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   bottom: -16px;
-      //   left: 20%;
-      //   border-top: 16px solid rgba(0, 0, 0, 0.8);
-      //   border-left: 10px solid transparent;
-      //   border-right: 10px solid transparent;
-      // }
       .title {
         width: 100%;
         padding: 6px 0;

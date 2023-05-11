@@ -12,36 +12,16 @@ export default new Router({
       path: "/",
       name: "Home",
       component: Home,
-      redirect:"Home",
+      redirect:"index",
       children:[
         {
-        path:'/index',
-        name:'index',
-        component:Index,
-       },
-    // // {
-    // //     path:'/detail/:id',
-    // //     name:'detail',
-    // //     component:Detail,
-    // // },
-    ]
-  
-  
-  
-        // path:'/',
-        // name:'index',
-        // component:Index,
-        // redirect:"index",
-        // children:[
-        //   {
-        //     path:'/Queen',
-        //     name:'Queen',
-        //     component:Queen,
-        //   },
-        // ]
-  
+          path:'/index',
+          name:'index',
+          component:Index,
+        },
+    ]  
     },
-    {
+  {
       path:'/Queen',
       name:'Queen',
       component:Queen,

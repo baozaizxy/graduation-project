@@ -5,8 +5,8 @@
             <div class="swiper-box">
               <swiper v-bind:options="swiperOption">
                 <swiper-slide v-for="(item,index) in slideList" v-bind:key="index">
-                  <!-- <a v-bind:href="'/#/Queen/'+item.id"><img v-bind:src="item.img"></a> -->
-                  <a v-bind:href="'/#/Queen/'"><img v-bind:src="item.img"></a>
+                  <a v-bind:href="'/#/Queen/'"><img v-bind:src="item.image" alt=""></a>
+                  <!-- <a v-bind:href="'/#/Queen/'"><img src = "./../assets/image/swiper-1.jpg" alt=""></a> -->
                 </swiper-slide>
                 <!-- Optional controls -->
               <div class="swiper-pagination"  slot="pagination"></div>
@@ -15,12 +15,15 @@
               </swiper>
             </div>
             <div class="ads-box">
-            <a v-bind:href="'/#/Queen/'+item.id" v-for="(item,index) in adsList" v-bind:key="index">
-              <img v-bind:src="item.img" alt="">
+            <a v-bind:href="'/#/Queen/'" >
+              <img src = "./../assets/image/bear.jpg" alt="">
+              <img src = "./../assets/image/bear.jpg" alt="">
+              <img src = "./../assets/image/bear.jpg" alt="">
+              <img src = "./../assets/image/bear.jpg" alt="">
             </a>
           </div>
             <div class="banner">
-            <a href="/#/Queen/30">
+            <a href="/#/Queen">
               <img src = "./../assets/image/banner-1.png" alt="">
             </a>
           </div>
@@ -53,7 +56,6 @@
           </div> -->
       <service-bar></service-bar>
     </div>
-
 </template>
 
 <script>
@@ -91,24 +93,26 @@
         },
         slideList:[
           {
-            // id:'42',
-            img:'./../assets/image/ROOM1'
+            image: "https://xqimg.imedao.com/1880b333fdc3ec3fecb0b97f.jpg!800.jpg",
+          },
+          {
+            image: "https://xqimg.imedao.com/1880b333f583f13fad0d47ea.jpg!800.jpg",
           },
         ],
         adsList:[
           {
             id:33,
-            img:'./../assets/image/ROOM1'
+            image: "/assets/image/swiper-1.jpg",
           },
           {
             id:48,
-            img:'./../assets/image/ROOM1'
+            image: require("@/assets/image/trousers.jpg"),
           },{
             id:45,
-            img:'./../assets/image/ROOM1'
+            image: require("@/assets/image/trousers.jpg"),
           },{
             id:47,
-            img:'./../assets/image/ROOM1'
+            image: require("@/assets/image/trousers.jpg"),
           }
         ],
       }
@@ -118,7 +122,7 @@
     },
   }
 </script>
-//设置border-box之后 height中涵盖了padding值 不设置总高度会再加上padding
+
 <style lang="scss">
 @import './../assets/scss/mixin.scss';
 @import './../assets/scss/config.scss';
@@ -204,8 +208,13 @@
     margin-top:14px;
     margin-bottom:31px;
     a{
+      display:flex;
       width:296px;
       height:167px;
+      img{
+        width:100%;
+        margin:auto;
+      }
     }
 
   }
