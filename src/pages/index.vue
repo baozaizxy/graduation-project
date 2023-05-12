@@ -5,7 +5,7 @@
             <div class="swiper-box">
               <swiper v-bind:options="swiperOption">
                 <swiper-slide v-for="(item,index) in slideList" v-bind:key="index">
-                  <a v-bind:href="'/#/Queen/'"><img v-bind:src="item.image" alt=""></a>
+                  <a v-bind:href="'/#/'+item.name"><img v-bind:src="item.image" alt=""></a>
                   <!-- <a v-bind:href="'/#/Queen/'"><img src = "./../assets/image/swiper-1.jpg" alt=""></a> -->
                 </swiper-slide>
                 <!-- Optional controls -->
@@ -15,12 +15,13 @@
               </swiper>
             </div>
             <div class="ads-box">
-            <a v-bind:href="'/#/Queen/'" >
-              <img src = "./../assets/image/bear.jpg" alt="">
-              <img src = "./../assets/image/bear.jpg" alt="">
-              <img src = "./../assets/image/bear.jpg" alt="">
-              <img src = "./../assets/image/bear.jpg" alt="">
-            </a>
+              <a
+          :href="item.src"
+          v-for="(item, index) in adsList"
+          :key="index"
+        >
+          <img v-bind:src="item.image" alt="" />
+        </a>
           </div>
             <div class="banner">
             <a href="/#/Queen">
@@ -93,27 +94,38 @@
         },
         slideList:[
           {
+            name:'Queen',
             image: "https://xqimg.imedao.com/1880b333fdc3ec3fecb0b97f.jpg!800.jpg",
           },
           {
+            name:'Man',
             image: "https://xqimg.imedao.com/1880b333f583f13fad0d47ea.jpg!800.jpg",
           },
+          {
+            name:'Cake',
+            image: "https://xqimg.imedao.com/1880f62c62c19a93fe9b24f0.jpg!800.jpg",
+          },
+          {
+            name:'Salon',
+            image: "https://xqimg.imedao.com/1880f57393419683fe3a8072.jpg",
+          },
+
         ],
         adsList:[
           {
-            id:33,
-            image: "/assets/image/swiper-1.jpg",
+            src:"https://www.disney.cn/",
+            image: "https://xqimg.imedao.com/1880efc789516783fef09866.jpg!custom.jpg",
+          },{
+            src:"https://www.skii.com.cn/product/facial-treatment-essence",
+            image: "https://xqimg.imedao.com/1880efc789916683fa0ff34d.jpg!custom.jpg",
+          },{
+            src:"https://www.lighting.philips.com.cn/welcome?origin=7_cn_zh_philipsb2b~aAL1435873_baidu_____",
+            image: "https://xqimg.imedao.com/1880efc788016543fdbf7cc2.jpg!custom.jpg",
           },
           {
-            id:48,
-            image: require("@/assets/image/trousers.jpg"),
-          },{
-            id:45,
-            image: require("@/assets/image/trousers.jpg"),
-          },{
-            id:47,
-            image: require("@/assets/image/trousers.jpg"),
-          }
+            src:"https://www.iffamily.com/cn/",
+            image: "https://xqimg.imedao.com/1880efc789e16793fe1941d0.jpg!custom.jpg",
+          },
         ],
       }
     },

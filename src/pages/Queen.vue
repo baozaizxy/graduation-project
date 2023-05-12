@@ -213,22 +213,6 @@ export default {
             },
           ],
         },
-        {
-          image: require("@/assets/image/liptips.jpg"),
-          tipsList: [
-            {
-              position: { x: 50, y: 50, z: 10 },
-              id: 0,
-              content: {
-                title: "返回",
-                text: "",
-                image: 1,
-                showTip: false,
-                showTitle: true,
-              },
-            },
-          ],
-        },
       ],
       tipsSpriteList: [],
       tooltipPosition: {

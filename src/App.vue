@@ -5,9 +5,9 @@
 </template>
 
 <style lang="scss">
-// @import "./assets/scss/reset.scss";
-// @import "./assets/scss/config.scss";
-// @import "./assets/scss/button.scss";
+@import "./assets/scss/reset.scss";
+@import "./assets/scss/config.scss";
+@import "./assets/scss/button.scss";
 @import "/assets/css/reset.css";
 body {
   margin: 0;

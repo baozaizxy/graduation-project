@@ -4,9 +4,8 @@
         <div class="container">
           <div class="topbar-menu">
             <a href="javascript:;">全景商城</a>
-            <a href="javascript:;">女装</a>
-            <a href="javascript:;">男装</a>
-            <a href="javascript:;">童装</a>
+            <a href="javascript:;">线上浏览</a>
+            <a href="javascript:;">极致体验</a>
           </div>
         </div>
       </div>
@@ -16,14 +15,14 @@
             <a href="/#/index"></a>
           </div>
           <div class="header-menu">
-            <!-- <div class="item-menu">
-              <span>女装区</span>
+            <div class="item-menu">
+              <span>一层区域</span>
               <div class="children">
                 <ul>
-                <li class="product" v-for="(item,index) in phoneList" :key="index">
-                  <a v-bind:href="'/#/Queen/'+item.id" target="_blank">
+                <li class="product" v-for="(item,index) in firstfloorList" :key="index">
+                  <a v-bind:href="'/#/'+item.src" target="_blank">
                     <div class="pro-img">
-                      <img v-bind:src="item.mainImage" :alt="item.subtitle">
+                      <img v-bind:src="item.mainImage" >
                     </div>
                     <div class="pro-name">{{item.name}}</div>
                     <div class="pro-price">{{item.price | currency}}</div>
@@ -31,77 +30,39 @@
                 </li>
               </ul>
               </div>
-            </div> -->
-            <div class="item-menu">
-              <span>女装区</span>
             </div>
             <div class="item-menu">
-              <span>男装区</span>
-            </div>
-            <div class="item-menu">
-              <span>童装区</span>
-            </div>
-            <!-- <div class="item-menu">
-              <span>童装区</span>
+              <span>二层区域</span>
               <div class="children">
-                 <ul>
-                  <li class="product">
-                    <a href="" target="_blank">
-                      <div class="pro-img">
-                        <img src="/imgs/nav-img/nav-3-1.jpg" alt="">
-                      </div>
-                      <div class="pro-name">全景壁画电视 65英寸</div>
-                      <div class="pro-price">6999元</div>
-                    </a>
-                  </li>
-                   <li class="product">
-                    <a href="" target="_blank">
-                      <div class="pro-img">
-                        <img src="/imgs/nav-img/nav-3-2.jpg" alt="">
-                      </div>
-                      <div class="pro-name">全景全面屏电视E55A</div>
-                      <div class="pro-price">1999元</div>
-                    </a>
-                  </li>
-                  <li class="product">
-                    <a href="" target="_blank">
-                      <div class="pro-img">
-                        <img src="/imgs/nav-img/nav-3-3.png" alt="">
-                      </div>
-                      <div class="pro-name">全景电视4A 32英寸</div>
-                      <div class="pro-price">699元</div>
-                    </a>
-                  </li>
-                   <li class="product">
-                    <a href="" target="_blank">
-                      <div class="pro-img">
-                        <img src="/imgs/nav-img/nav-3-4.jpg" alt="">
-                      </div>
-                      <div class="pro-name">全景电视4A 55英寸</div>
-                      <div class="pro-price">1799元</div>
-                    </a>
-                  </li>
-                  <li class="product">
-                    <a href="" target="_blank">
-                      <div class="pro-img">
-                        <img src="/imgs/nav-img/nav-3-5.jpg" alt="">
-                      </div>
-                      <div class="pro-name">全景电视4A 65英寸</div>
-                      <div class="pro-price">2699元</div>
-                    </a>
-                  </li>
-                   <li class="product">
-                    <a href="" target="_blank">
-                      <div class="pro-img">
-                        <img src="/imgs/nav-img/nav-3-6.png" alt="">
-                      </div>
-                      <div class="pro-name">查看全部</div>
-                      <div class="pro-price">全景电视</div>
-                    </a>
-                  </li>
-                </ul>
+                <ul>
+                <li class="product" v-for="(item,index) in secondfloorList" :key="index">
+                  <a v-bind:href="'/#/'+item.src" target="_blank">
+                    <div class="pro-img">
+                      <img v-bind:src="item.mainImage" >
+                    </div>
+                    <div class="pro-name">{{item.name}}</div>
+                    <div class="pro-price">{{item.price | currency}}</div>
+                  </a>
+                </li>
+              </ul>
               </div>
-            </div> -->
+            </div>
+            <div class="item-menu">
+              <span>三层区域</span>
+              <div class="children">
+                <ul>
+                <li class="product" v-for="(item,index) in thirdfloorList" :key="index">
+                  <a v-bind:href="'/#/'+item.src" target="_blank">
+                    <div class="pro-img">
+                      <img v-bind:src="item.mainImage" >
+                    </div>
+                    <div class="pro-name">{{item.name}}</div>
+                    <div class="pro-price">{{item.price | currency}}</div>
+                  </a>
+                </li>
+              </ul>
+              </div>
+            </div>
           </div>
           <div class="header-search">
             <div class="wrapper">
@@ -118,7 +79,63 @@
     name:'nav-header',
     data(){
       return{
-        phoneList:[]
+        firstfloorList:[
+        {
+            src:'Queen',
+            mainImage:'https://xqimg.imedao.com/1880eda147915823fdf2516d.jpg',
+            name:'Queen 女装店',
+            price:'均价500',
+          },
+          {
+            src:'Cake',
+            mainImage:'https://xqimg.imedao.com/1880ed85f9315273fe2c43b6.jpg',
+            name:'可可烘焙',
+            price:'均价 66',
+          },{
+            src:'Resturant',
+            mainImage:'https://xqimg.imedao.com/1880ed85fe415263fec631f9.jpg',
+            name:'好味',
+            price:'均价 109',
+          }
+        ],
+        secondfloorList:[
+        {
+            src:'Man',
+            mainImage:'https://xqimg.imedao.com/1880ed8613b15033fd41382a.jpg',
+            name:'优雅男装',
+            price:'均价500',
+          },
+          {
+            src:'Gym',
+            mainImage:'https://xqimg.imedao.com/1880ed8609b156a3fde1b8fe.jpg',
+            name:'燃脂健身',
+            price:'年卡 1999',
+          },{
+            src:'CyberBar',
+            mainImage:'https://xqimg.imedao.com/1880ed85f3715023fa643bc6.jpg',
+            name:'极速网吧',
+            price:'均价 30/h',
+          }
+        ],
+        thirdfloorList:[
+        {
+            src:'Child',
+            mainImage:'https://xqimg.imedao.com/1880ef2d9b0169a3fcb1c11c.jpg!custom.jpg',
+            name:'儿童乐园',
+            price:'100/人',
+          },
+          {
+            src:'Salon',
+            mainImage:'https://xqimg.imedao.com/1880ef2d9be16613fdef25b2.jpg!custom.jpg',
+            name:'美容美发',
+            price:'均价 399',
+          },{
+            src:'Yoga',
+            mainImage:'https://xqimg.imedao.com/1880ef2a56a15fe3fdf23a7f.jpg',
+            name:'瑜伽馆',
+            price:'年卡 1999',
+          }
+        ],
       }
     },
     computed:{
@@ -182,7 +199,7 @@
               height:55px;
               &:before{
                 content:' ';
-                @include bgImg(55px,55px,'./../assets/image/mi-logo.png',55px);
+                @include bgImg(55px,55px,'./../assets/image/snow-logo.png',55px);
                 transition:margin .2s;
               }
               &:after{
@@ -229,47 +246,47 @@
           z-index: 10;
           transition: all .5s;
           background-color: #ffffff;
-          // .product{
-          //   position:relative;
-          //   float:left;
-          //   width:16.6%;
-          //   height:220px;
-          //   font-size:12px;
-          //   line-height:12px;
-          //   text-align: center;
-          //   a{
-          //     display:inline-block;
-          //   }
-          //   img{
-          //     width:auto;
-          //     height:111px;
-          //     margin-top:26px;
-          //   }
-          //   .pro-img{
-          //     height:137px;
-          //   }
-          //   .pro-name{
-          //     font-weight: bold;
-          //     margin-top: 19px;
-          //     margin-bottom: 8px;
-          //     color: $colorB;
-          //   }
-          //   .pro-price{
-          //     color: $colorA;
-          //   }
-          //   &:before{
-          //   content:' ';
-          //   position:absolute;
-          //   top:28px;
-          //   right:0;
-          //   border-left:1px solid $colorF;
-          //   height:100px;
-          //   width:1px;
-          // }
-          // &:last-child:before{
-          //   display:none;
-          // }
-          // }
+          .product{
+            position:relative;
+            float:left;
+            width:33%;
+            height:220px;
+            font-size:12px;
+            line-height:12px;
+            text-align: center;
+            a{
+              display:inline-block;
+            }
+            img{
+              width:auto;
+              height:111px;
+              margin-top:26px;
+            }
+            .pro-img{
+              height:137px;
+            }
+            .pro-name{
+              font-weight: bold;
+              margin-top: 19px;
+              margin-bottom: 8px;
+              color: $colorB;
+            }
+            .pro-price{
+              color: $colorA;
+            }
+            &:before{
+            content:' ';
+            position:absolute;
+            top:28px;
+            right:0;
+            border-left:1px solid $colorF;
+            height:100px;
+            width:1px;
+          }
+          &:last-child:before{
+            display:none;
+          }
+          }
         }
       }
         }

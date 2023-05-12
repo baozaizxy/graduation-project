@@ -3,6 +3,15 @@ import Router from "vue-router";
 import Home from "./src/pages/home.vue";
 import Index from "./src/pages/index.vue";
 import Queen from "./src/pages/Queen.vue";
+import Man from "./src/pages/Man.vue";
+import Child from "./src/pages/Child.vue";
+import Gym from "./src/pages/Gym.vue";
+import Cake from "./src/pages/Cake.vue";
+import CyberBar from "./src/pages/CyberBar.vue";
+import Yoga from "./src/pages/Yoga.vue";
+import Resturant from "./src/pages/Resturant.vue";
+import Salon from "./src/pages/Salon.vue";
+
 
 Vue.use(Router);
 
@@ -21,11 +30,51 @@ export default new Router({
         },
     ]  
     },
-  {
+    {
       path:'/Queen',
       name:'Queen',
       component:Queen,
+    },
+    {
+      path:'/Man',
+      name:'Man',
+      component:Man,
+    },
+  {
+    path:'/Child',
+    name:'Child',
+    component:Child,
   },
+  {
+    path:'/Cake',
+    name:'Cake',
+    component:Cake,
+  },
+  {
+    path:'/Gym',
+    name:'Gym',
+    component:Gym,
+  },
+  {
+    path:'/CyberBar',
+    name:'CyberBar',
+    component:CyberBar,
+  },
+  {
+    path:'/Yoga',
+    name:'Yoga',
+    component:Yoga,
+},
+{
+  path:'/Resturant',
+  name:'Resturant',
+  component:Resturant,
+},
+{
+  path:'/Salon',
+  name:'Salon',
+  component:Salon,
+},
   ],
 });
 
