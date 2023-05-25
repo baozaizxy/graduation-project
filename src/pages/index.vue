@@ -5,7 +5,7 @@
             <div class="swiper-box">
               <swiper v-bind:options="swiperOption">
                 <swiper-slide v-for="(item,index) in slideList" v-bind:key="index">
-                  <a v-bind:href="'/#/'+item.name"><img v-bind:src="item.image" alt=""></a>
+                  <a v-bind:href="'/#/'+item.name" target="_blank"><img v-bind:src="item.image" alt=""></a>
                   <!-- <a v-bind:href="'/#/Queen/'"><img src = "./../assets/image/swiper-1.jpg" alt=""></a> -->
                 </swiper-slide>
                 <!-- Optional controls -->

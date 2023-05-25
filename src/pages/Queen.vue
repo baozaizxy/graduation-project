@@ -363,6 +363,7 @@ export default {
       let element = this.$refs.threeDBox;
       let raycaster = new THREE.Raycaster();
       let mouse = new THREE.Vector2();
+      console.log("innnnnnnnnnn7789877", element)
       mouse.x = (e.clientX / element.clientWidth) * 2 - 1;
       mouse.y = -(e.clientY / element.clientHeight) * 2 + 1;
       raycaster.setFromCamera(mouse, this.camera);
